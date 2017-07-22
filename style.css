@@ -19,8 +19,8 @@ body {
   padding-bottom: 5px;
   font-family: 'Nova Mono';
   font-size: 30px;
-  /*color: #d8366f;*/
-	color: #00b8c6;
+  color: #d8366f;
+	/*color: #00b8c6;*/
   background-color: #d4ff00;
 	/*background: repeating-linear-gradient(
 	45deg,
@@ -39,8 +39,8 @@ body {
 	font-size: 1.2rem;
 	line-height: 130%;
 	text-align: justify;
-	/*color: #d8366f;*/
-	color: #00b8c6;
+	color: #d8366f;
+	/*color: #00b8c6;*/
 }
 
 .bio{
@@ -140,8 +140,8 @@ body {
 a{
   font-weight: 500;
   text-decoration: none;
-  /*color: #d8366f;*/
-	color: #00b8c6;
+  color: #d8366f;
+	/*color: #00b8c6;*/
 }
 a:hover {
     background-color: #d4ff00;
