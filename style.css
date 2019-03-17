@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:500');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
 
 body {
 	margin: 0;
@@ -10,145 +8,246 @@ body {
 	font-size: 100%;
 	vertical-align: baseline;
 	line-height: 1;
-	background-color:#EEE;
+	background-color:#DDD;
+}
+
+@media (min-width: 1020px) and (min-aspect-ratio: 1222/1000) {
+aside {
+    display: none;
+}
+
+body {
+	background-image: url(1L8A1022.jpg);
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-attachment:fixed;
+}
+}
+
+@font-face {
+	font-family:'Novecento wide Medium';
+	src: url('Novecentowide-Medium.otf');
+	src: local('Novecento wide Medium'), url('Novecentowide-Medium.otf') format('truetype');
+}
+
+.Novecentowide-Medium {
+	font-family: Novecentowide-Medium;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.wrapper{
+	margin: auto;
+	width:920px;
 }
 
 #title{
-  padding: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-family: 'Nova Mono';
-  font-size: 30px;
-  /*color: #d8366f;*/
-	color: #00b8c6;
-  background-color: #d4ff00;
-	/*background: repeating-linear-gradient(
-	45deg,
-	#d4ff00,
-	#d4ff00 50%,
-	#00b8c6 50%,
-	#00b8c6 100%
-);*/
-}
-
-#bio-container{
-	padding: 15px;
-	padding-top: 5px;
-	font-family: 'Work Sans';
-	font-weight: 300;
-	font-size: 1rem;
-	line-height: 130%;
-	text-align: justify;
-	color: #111;
-	/*color: #d8366f;*/
-}
-
-.bio{
-	display: inline;
-}
-
-#works{
-	position: relative;
-	padding: 15px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-#work-title{
-	position: relative;
-	font-family: 'Nova Mono';
-	font-size: 1.5rem;
-	padding: 2px;
-	color: #EEE;
-	background-color: #00b8c6;
-	/*color: #00b8c6;
-	background-color: #d4ff00;*/
-	/*display: inline-block;*/
-}
-
-#work-container{
-	position: relative;
-	float: left;
-	width: 50%;
-	box-sizing: border-box;
-	padding-bottom: 10px;
-	padding-right: 10px;
-	/*background-color: #00b8c6;*/
-	/*padding: 15px;
-	padding-top: 0px;
-	padding-bottom: 0px;*/
-}
-
-#work-image{
-	position: relative;
-	width:100%
-}
-
-/*#triangle-fill{
-	position: absolute;
-	z-index: -1;
-	background: linear-gradient(
-	-45deg,
-	rgba(255, 255, 255, .0),
-	rgba(255, 255, 255, .0) 50%,
-	#00b8c6 50%,
-	#00b8c6 100%
-);
-	width: 15vw;
-	height: 15vw;
-}*/
-
-#work-description-container{
-	width:100%;
-	font-family: 'Work Sans';
-	font-weight: 300;
-	font-size: 1rem;
-	position: relative;
-	display: inline-block;
-}
-
-.work-description{
-	width:100%;
-	position: relative;
-	padding: 1px;
-	line-height: 130%;
-	color: #EEE;
-	background-color: #00b8c6;
-	display: inline;
-}
-
-#more-button{
-	color: #00b8c6;
-	background-color: #d4ff00;
-	font-family: 'Work Sans';
-	font-weight: 300;
-	font-size: 90%;
-	padding: 1px;
-	cursor: pointer;
-	border: 0;
-	margin: 0;
-}
-
-#spacer{
+	margin:auto;
 	float:left;
-	margin-left: 15px;
-	margin-right: 15px;
-	padding:5px;
-	background: repeating-linear-gradient(
-  45deg,
-  #00b8c6,
-  #00b8c6 50px,
-  #d4ff00 50px,
-  #d4ff00 100px
-);
+	clear:both;
+	width:300px;
+	font-family: Novecentowide-Medium;
+	font-size: 50px;
+	color:#E9E9E9;
+	background-color:#0C9;
+	padding:20px;
+	padding-top:10px;
 }
 
-a{
-  font-weight: 500;
-  text-decoration: none;
-	color: #00b8c6;
-	/*color: #d8366f;*/
+#subtitle{
+	position:relative;
+	margin-top: 40px;
+	width:880px;
+	float:left;
+	clear:both;
+	padding-left:20px;
+	padding-right: 20px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+#biobackground{
+	background: #0C9;
+  	filter: alpha(opacity=9);
+  	-moz-opacity: 0.9;
+ 	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index:-1;
+}
+
+#bio{
+	text-height:20px;
+	color:#FFFFFF;
+	font-size: 13px;
+	text-align:justify;
+	font-family: Roboto;
+	opacity:1;
+	line-height: 1.2;
+}
+
+.menu{
+	float: left;
+	clear:both;
+	width:900px;
+	margin: auto;
+	padding-left: 20px;
+	padding-bottom:7px;
+	font-size: 50px;
+	color: #444;
+	background-color:#E9E9E9;
+	font-family: Novecentowide-Medium;
+	line-height: 1.2;
+	text-height: 0px;
+}
+
+#sectionHeader{
+	float:left;
+	margin-right:130px;
+}
+
+.content{
+	margin: auto;
+	float: left;
+	width: 920px;
+	background: rgba(255, 255, 255, 0.67);
+	color: #555;
+	text-align: justify;
+	font-size: 12px;
+	font-family: Roboto;
+	font-weight:normal;
+	line-height: 1.2;
+}
+
+#contentColumn{
+	position:relative;
+	float:left;
+	margin-left:20px;
+	width:430px;
+}
+
+#contentRow{
+	position:relative;
+	float:left;
+	margin-left:20px;
+	width:880px;
+}
+
+#artwork{
+	margin:auto;
+	margin-top:20px;
+	position:relative;
+	background-color:#0C9;
+	padding-top:5px;
+}
+
+#article{
+	margin:auto;
+	position:relative;
+	padding-top:10px;
+	background-color:#F5F5F5;
+	padding-bottom:15px;
+	padding-left:10px;
+	font-family: Novecentowide-Medium;
+	font-size: 40px;
+	text-align:left;
+	color: #444;
+
+}
+
+#artworkText{
+	margin:auto;
+	position:relative;
+	background-color:#E9E9E9;
+	font-family:Roboto;
+	line-height: 1.2;
+	padding:10px;
+	opacity:0.85;
+}
+
+#artworkYear{
+	position: absolute;
+	right:0;
+	z-index: 20;
+	width: 35px;
+	height: 15px;
+	margin-right:15px;
+	margin-top:-5px;
+	color: #E9E9E9;
+	background-color:#0C9;
+	padding-top:5px;
+	font-size:12px;
+	text-align:center;
+}
+
+#socialBlocker{
+	position: absolute;
+	right: 1px;
+	z-index: 1;
+	overflow: visible;
+	width: 125px;
+	height: 52px;
+	background-color: #F5F5F5;
+}
+
+#contactDetails{
+	position:relative;
+	float:left;
+	width:890px;
+	padding:10px;
+	padding-left:20px;
+	margin-top:20px;
+	background-color:#E9E9E9;
+	opacity:0.7;
+}
+
+#grayScale {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%) contrast(80%); /*Chrome & Safari 6+ */
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all .8s ease;
+
+}
+
+#grayScale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%) contrast(100%);
+}
+
+a:link {
+	color:inherit;
+	text-decoration: none;
+}
+a:visited {
+	color:inherit;
+	text-decoration: none;
 }
 a:hover {
-    background-color: #d4ff00;
+	text-decoration: none;
 }
+a:active {
+	text-decoration: none;
+}
+
+/* @license
+ * MyFonts Webfont Build ID 2542430, 2013-04-28T08:50:26-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Novecento Wide Medium by Synthview
+ * URL: http://www.myfonts.com/fonts/synthview/novecento/wide-medium/
+ * Copyright: Copyright &#x00A9; 2011 by Jan Tonellato. All rights reserved.
+ * Licensed pageviews: Unlimited
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2542430
+ *
+ * © 2013 MyFonts Inc
+*/
