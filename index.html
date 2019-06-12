@@ -2,240 +2,224 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Anıl Çamcı</title>
-
-<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
 <link rel="stylesheet" type="text/css" href="style.css">
-
+<base target="_blank">
+<title>Anıl Çamcı</title>
 </head>
 
+<script src="imagesloaded.pkgd.min.js"></script>
+
+<script>
+	function resizeGridItem(item){
+	  grid = document.getElementsByClassName("grid")[0];
+	  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+	  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+	  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+	  item.style.gridRowEnd = "span "+rowSpan;
+	}
+
+	function resizeAllGridItems(){
+	  allItems = document.getElementsByClassName("work-container");
+	  for(x=0;x<allItems.length;x++){
+	    resizeGridItem(allItems[x]);
+	  }
+	}
+
+	function resizeInstance(instance){
+		item = instance.elements[0];
+	  resizeGridItem(item);
+	}
+
+	window.onload = resizeAllGridItems();
+	window.addEventListener("resize", resizeAllGridItems);
+	document.addEventListener("DOMContentLoaded", function(e) {
+		allItems = document.getElementsByClassName("work-container");
+		for(x=0;x<allItems.length;x++){
+			imagesLoaded(allItems[x], resizeInstance);
+		}
+	});
+
+
+</script>
+
 <body>
-<div class="wrapper">
 
-	<div id = "title"><a href="mailto:anilcamci@gmail.com">ANIL ÇAMCI</a></div>
-
-	<div id = "subtitle">
-			<div id = "biobackground"></div> <div id = "bio"> I am an Assistant
-			Professor of Performing Arts Technology at the University of Michigan. My
-			work investigates new tools and theories for multimodal worldmaking using
-			a variety of media ranging from electronic music to virtual reality.
-			Previously, I was a postdoctoral research associate at the University of
-			Illinois at Chicago's Electronic Visualization Laboratory, where I led
-			research projects on human-computer interaction and immersive audio in
-			virtual reality contexts. Prior to this appointment, I worked as a faculty
-			member of the Istanbul Technical University, Center for Advanced Studies
-			in Music, where I founded the Sonic Arts program. I completed my PhD at
-			Leiden University in affiliation with the Institute of Sonology in The
-			Hague, and the Industrial Design Department at Delft University of
-			Technology. I hold an MSc degree in Multimedia Engineering from the Media
-			Arts and Technology Department at the University of California, Santa
-			Barbara. My work has been presented throughout the world in leading
-			journals and conferences. I have been granted several awards, including
-			the Audio Engineering Society Fellowship, and the ACM CHI Artist Grant.
-			</div>
+	<div class="navbar">
+	  <div id="title">Anıl Çamcı</div>
+		<div id="menu-container"><div id="menu">
+			<!-- <span class="active">Spotlight</span>
+			<span class="inactive"><a href="art.html">Art</a></span>
+			<span class="inactive"><a href="research.html">Research</a></span> -->
+		</div></div>
 	</div>
 
-	<div class = "menu"><div id = "sectionHeader">SELECTED WORKS</div></div>
-
-	<div class = "content">
-
-		<div id = "contentRow">
-			<div id = "artwork">
-				<div id = "artworkYear">2018</div>
-				<img id = "grayScale" src="media/vylderness/vylderness.jpg" style="width:880px;">
-			</div>
-
-			<div id = "artworkText"><i>Vylderness</i> is an upcoming virtual
-			reality performance.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2017</div>
-				<img id = "grayScale" src="media/synthCity/synthCity.jpg" style="width:430px;">
-			</div>
-
-			<div id = "artworkText"><i>Synthcity</i> is a generative audiovisual
-			installation. By computationally blending everyday figures and
-			textures, it synthesizes extremely unrealistic versions of a city
-			using its real landscapes, objects, sounds and people. <i>Synthcity</i>
-			was premiered at ISEA 2017 in Manzales, Colombia.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2017</div>
-				<img id = "grayScale" src="media/inviso/inviso.png" width="430">
-			</div>
-
-			<div id = "artworkText"><i>Inviso</i> is a browser-based
-			application for creating virtual sonic environments. It can be accessed
-			at <a href="http://inviso.cc" target="new">http://inviso.cc<a>. A UIST paper about Inviso can be found <a href="../media/Camci_-_Inviso.pdf" target="new">here</a>.</div>
-		</div>
-
-		<div id = "contentRow">
-			<div id = "artwork">
-				<div id = "artworkYear">2016</div>
-				<img id = "grayScale" src="media/temas/temas.jpg">
-			</div>
-
-		  <div id = "socialBlocker"></div>
-			<iframe width="880px" height="125px" scrolling="no" frameborder="no"
-		  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142675142%3Fsecret_token%3Ds-b6GtO&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe>
-
-		  <div id = "artworkText"><i>Temas</i> is a stochastic audiovisual performance.
-		  The software underlying <i>Temas</i> integrates the artist into a generative
-		  system as a module of analysis. <i>Temas</i> stochastically traverses the fine line between the organic and
-		  the synthesized, forming contacts with representationality. Each of
-		  the work's five sections utilizes a different layer of audiovisual
-		  worldmaking that situate the audience and the performer at various
-		  points inside the implied universe of the narrative. As the
-		  perspective shifts, abstract forms take on representational duties,
-		  and alter the nature of immersion.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id ="artworkYear">2016</div>
-				<div id = "article"><a href="../media/Camci_-_Imagining_Through_Sound.pdf" target="new">ARTICLE (PDF)</a></div>
-			</div>
-
-			<div id = "artworkText"><b>Imagining Through Sound:
-			An Experimental Analysis of Narrativity in Electronic Music </b>
-			[<em>Organised Sound</em> 21(3)] <p> Electronic music engages with the
-			listening habits we take for granted in our everyday lives, and reveals how
-			intricate they can be. Inspired by such intricacies, I have conducted a
-			series of listening experiments with 80 participants over the course of
-			three years to explore the cognition of electronic music. In this text, I
-			first present the method and the results of this experiment, including
-			a categorical analysis of mental associations evoked by different works of
-			electronic music. Next, I offer a discussion of narrativity in
-			electronic music supported by these results and diverse perspectives on
-			narrativity from a number of disciplines. I then construct a definition
-			of gestures as narrative units in electronic music in relation to events in
-			the environment. In doing so, I bring together various theories on
-			electronic music with not only the findings of the current study but also
-			existing research on auditory cognition.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2016</div>
-				<img id = "grayScale" src="media/distractions/distractions.png" width="430">
-			</div>
-
-			<div id = "artworkText"><i>Distractions</i>: a kinetic sculpture
-			that utilizes inaudible frequencies to visualize invisible electromagnetic
-			signals that surround us in daily life. It highlights some of our routine
-			sources of distraction in their raw forms using a single physical artifact
-			that brings together together data sonification and visualization.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2015</div>
-				<iframe
-				src="http://player.vimeo.com/video/116648528?portrait=0&amp;color=ffffff"
-				width="430" height="242" frameborder="0" webkitallowfullscreen
-				mozallowfullscreen allowfullscreen></iframe>
-			</div>
-
-			<div id = "artworkText"><i>Node Kara</i> is a mixed-reality installation,
-			which brings together body-based human-computer interaction, live video
-			processing, and stochastic audio synthesis. By adopting the process of
-			blurring both as a theme, and a technique, <i>Node Kara</i> obfuscates the
-			causal link between an interactive artwork and its audience. The
-			deblurring of the audiovisual scene through the visitor's embodied
-			presence becomes an attracting force that invites the viewer to unravel
-			the underlying world of <i>Node Kara</i>.</div>
-		</div>
-
-		<div id = "contentColumn"> <div id = "artwork"> <div id =
-		"artworkYear">2013</div> <div id = "socialBlocker"></div> <iframe
-		width="430px" height="125px" scrolling="no" frameborder="no"
-		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/94794651%3Fsecret_token%3Ds-hyAMd&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe></div>
-		<div id = "artworkText">"Diegesis is utilized as a paradigm to explain
-		the tension/interaction between near and far while questioning the
-		extents to which the listener is inside or outside the musical
-		material." (Çamcı 2013). <em>With an homage to Roads' homage to
-		Subotnick, and a citation of Beethoven</em>.</div> </div>
-
-		<div id = "contentColumn"> <div id = "artwork"> <div id =
-		"artworkYear">2011</div> <div id = "socialBlocker"></div> <iframe
-		width="430px" height="125px" scrolling="no" frameborder="no"
-		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/31266339%3Fsecret_token%3Ds-u6Vn3&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe></div>
-		<div id = "artworkText">A Christmas song for a world that no longer exists,
-		as crooned by the Anti-Santa strolling a wasteland formerly known as Earth:
-		A repurposing of Tin Men and The Telephone's celebrated Christmas
-		album.</div> </div>
-
-		<div id = "contentRow"> <div id = "artwork"> <div id =
-		"artworkYear">2013</div> <img id = "grayScale"
-		src="media/into/into.jpg"> </div> <div id =
-		"artworkText"><strong>I.N.T.O.</strong>: Series of still images and
-		videos. This work was repurposed as a visual language for the
-		Istanbul band Fakap.</div> </div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2012</div>
-				<div id = "socialBlocker"></div>
-				<iframe width="430px" height="125px" scrolling="no" frameborder="no"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/42845936%3Fsecret_token%3Ds-fszUB&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe>
-			</div>
-
-		  <div id = "artworkText"><em>Birdfish</em> is the second piece
-		  of a tetralogy on evolutionary phenomena. In two movements, it
-		  explores organic forms that transcend the surface of the
-		  ocean.</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2010</div>
-				<div id = "socialBlocker"></div>
-				<iframe width="430px" height="125px" scrolling="no" frameborder="no"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2307897%3Fsecret_token%3Ds-u0Bjz&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe>
-			</div>
-			<div id = "artworkText">The opening speech to the piece is from a
-			broadcasting of the 2006 solar eclipse, which was viewed in its
-			totality at various locations in Turkey. As an out-of-place
-			experiencing of this bewildering event, not through the eyes of the
-			man but the machine, the piece depicts "a phenomenon impossible to
-			photograph".</div>
-		</div>
-
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id = "artworkYear">2007</div>
-				<div id ="socialBlocker"></div> <iframe width="430px" height="125px" scrolling="no" frameborder="no"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1912321%3Fsecret_token%3Ds-pYO2n&color=e2e2e2&amp;auto_play=false&amp;show_artwork=false"></iframe>
-			</div>
-
-			<div id = "artworkText">An unresolved mistery in two movements that mimick
-			one another. In 2008, <em>Do you remember Rob Nolasco?</em> was used for
-			the short film <em>A Case of Stairs</em>, in collaboration with Aydintug
-			and Wikstol.</div>
+	<div id="bio-container">
+	  I am an Assistant Professor of <a
+	  href="https://smtd.umich.edu/pat/">Performing Arts Technology</a> at the
+	  Univesity of Michigan. I investigate ways of worldmaking through multimedia
+	  artworks and research in the areas of virtual reality, human-computer
+	  interaction, and spatial audio. Before joining the University of Michigan, I
+	  was a Postdoctoral Research Associate at the University of Illinois at
+	  Chicago's <a href="https://www.evl.uic.edu">Electronic Visualization
+	  Laboratory</a>, where I lead research into immersive systems. Prior to this
+	  appointment, I was a faculty member of the Istanbul Technical University,
+	  Center for Advanced Studies in Music, where I founded the <a
+	  href="https://www.facebook.com/MiamSonicArts/">Sonic Arts Program</a>. I
+	  conducted my PhD research at Leiden University's <a
+	  href="https://www.universiteitleiden.nl/en/humanities/academy-of-creative-and-performing-arts">Academy
+	  of Creative and Performing Arts</a>, in affiliation with the <a
+	  href="http://www.sonology.org">Institute of Sonology</a> in The Hague, and
+	  the <a href="https://www.tudelft.nl/en/ide/">Industrial Design
+	  Department</a> at Delft University of Technology. I studied Multimedia
+	  Engineering at the University of California, Santa Barbara's <a
+	  href="https://www.mat.ucsb.edu">Media Arts and Technology Department</a>. My
+	  works have been featured throughout the world in leading journals, such as
+	  Leonardo Music Journal, Organised Sound, Soundscape and IEEE CG&A, and
+	  conferences including CHI, UIST, IEEE VR, NIME and ICMC. I have been awarded
+	  various grants and scholarships including the Audio Engineering Society
+	  Fellowship and the ACM CHI Artist Grant.
 	</div>
 
-		<div id = "contentColumn">
-			<div id = "artwork">
-				<div id ="artworkYear">2008</div>
-				<iframe
-				src="http://player.vimeo.com/video/15850914?portrait=0&amp;color=ffffff"
-				width="430" height="245" frameborder="0" webkitallowfullscreen
-				mozallowfullscreen allowfullscreen></iframe>
+	<div class="grid">
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/alarmVR.png">
+				<div id="work-title">AlarmVR<span style="font-size: 0.8rem; vertical-align: middle;"> [2019]</span> </div>
+				<div id="work-description-container">
+					This project employs VR and immersive audio to identify and address
+					the underlying auditory causes of one of the top patient safety
+					hazards in clinical environments, namely alarm fatigue, which is a
+					form of sensory overload that causes healthcare professionals to be
+					desensitized towards alarm events due to extended exposure.
+					<p><a href="https://mcubed.umich.edu/projects/alarmvr-investigating-alarm-fatigue-clinical-environments-using-immersive-audio-and">Project Website</a>
+				</div>
 			</div>
 		</div>
 
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/hyperreal.png">
+				<div id="work-title">Hyperreal Instruments<span style="font-size: 0.8rem; vertical-align: middle;"> [2019]</span> </div>
+				<div id="work-description-container">
+					The Hyperreal Instruments Project bridges VR and digital fabrication toward the design of new
+					virtual instruments that can defy our sense of audiovisual reality
+					while satisfying our proprioceptive and haptic expectations. In doing
+					so, the project aims to identify the unique affordances of VR for
+					musical expression.
 
-		<div id = "contactDetails">anilcamci.com 2018 | All rights reserved. | <a
-		href="mailto:anilcamci@gmail.com">Contact</a></div>
+					<!-- <p>In press with the <a href="https://www.mitpressjournals.org/loi/lmj">Leonardo Music Journal</a> -->
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/vylderness.jpg">
+				<div id="work-title">Vylderness<span style="font-size: 0.8rem; vertical-align: middle;"> [2019]</span> </div>
+				<div id="work-description-container">
+					Vylderness is an upcoming Virtual Reality and Modular Synthesis
+					performance that brings the audience into a narrative audiovisual
+					experience driven by live electronic music. The 3 gamified stories
+					that make up the work, namely "Finding Me", "Affordances" and "The
+					Vyld", are intertwined both conceptually and spatially.
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/inviso.png">
+				<div id="work-title">Inviso<span style="font-size: 0.8rem; vertical-align: middle;"> [2017-2019]</span> </div>
+				<div id="work-description-container">
+					Inviso is a web-based application for designing and experiencing rich
+					and dynamic sonic virtual realities. It enables both novice and expert
+					users to construct complex immersive sonic environments with 3D
+					dynamic sound components.
+
+					<p><a href="http://inviso.cc">http://inviso.cc</a> • <a href="publications/Camci_2017_UIST_Inviso.pdf">UIST Paper</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<!-- <img id="work-image" src="media/synthCity.jpg"> -->
+				<div id="work-title">Future of Audio in VR<span style="font-size: 0.8rem; vertical-align: middle;"> [2018-2019]</span> </div>
+				<div id="work-description-container">
+					These series of workshops aim to bring VR researchers and
+					practicioners from a wide range of backgrounds together to specify the ways
+					in which we can think natively about VR audio and articulate the role
+					of sound in the ultimate displays of the future. The workshops
+					not only highlight recent developments in VR audio, but also
+					identify the needs of the VR community in creating compelling virtual
+					auditory experiences for the next generation of immersive media.
+					<p><a href="https://favr2019.github.io">IEEE VR Workshop Website</a> • <a href="https://audio1stVR.github.io">NIME Workshop Website</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/252820148?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				<div id="work-title">GrainTrain<span style="font-size: 0.8rem; vertical-align: middle;"> [2018]</span> </div>
+				<div id="work-description-container">
+					GrainTrain is an innovative multi-touch performance tool for real-time
+					granular synthesis based on hand-drawn waveforms. It is a
+					cross-platform web application that can run on both desktop and mobile
+					computers, including tablets and phones.
+
+					<p><a href="http://graintra.in">http://graintra.in</a> • <a href="publications/Camci_2018_NIME_GrainTrain.pdf">NIME Paper</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<iframe width="100%" height="125" scrolling="no" frameborder="no"
+				allow="autoplay"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/634242198%3Fsecret_token%3Ds-MOsuU&color=e2e2e2&amp&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&show_artwork=false"></iframe>
+
+				<div id="work-title">A Now Unknown (Excerpt) <span style="font-size: 0.8rem; vertical-align: middle;"> [2018]</span> </div>
+				<div id="work-description-container">
+					Weaving 40 performances with a modular synthesizer from a 2-year span, A Now
+					Unknown traverses the middle ground between the indeterminacy of the modular
+					medium, and the undulating path that is a composer's plan. The turns of the same
+					knob––days, months and years apart––are frozen and juxtaposed into an abundance
+					of once present moments; a bricolage of nows that are impossible to tell when.
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/synthCity.jpg">
+				<div id="work-title">Synthcity<span style="font-size: 0.8rem; vertical-align: middle;"> [2015-2018]</span> </div>
+				<div id="work-description-container">
+					Synthcity is an audiovisual performance. By computationally blending
+					everyday figures and textures, it synthesizes extremely unrealistic
+					versions of a city using its real landscapes, objects, sounds and
+					people. Synthcity was premiered at ISEA 2017 in Manzales, Colombia.
+				</div>
+			</div>
+		</div>
+
+		<div class="work-container">
+			<div class="content">
+				<img id="work-image" src="media/temas.png">
+				<div id="work-title">Temas<span style="font-size: 0.8rem; vertical-align: middle;"> [2014-2016]</span> </div>
+				<div id="work-description-container">
+					Temas is a stochastic audiovisual performance. The software underlying
+					Temas integrates the artist into a generative system as a module of
+					analysis. The most recent version of Temas was premiered at the
+					Experimental Sound Studio in Chicago in November 2016.
+				</div>
+			</div>
+		</div>
 
 	</div>
 
+	<div id = "contactDetails">anilcamci.com 2019 • All rights reserved • <a
+	href="mailto:anilcamci@gmail.com" style="color:#9bffee">Contact</a></div>
 
-
-</div>
 </body>
 </html>
