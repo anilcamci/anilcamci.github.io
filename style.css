@@ -35,7 +35,7 @@ body {
   margin-left: 20px;
   margin-top: 8px;
 	margin-bottom: 5px;
-  font-size: 2.2rem;
+  font-size: 3vw;
 	color: #007a99;
 }
 
@@ -81,7 +81,7 @@ body {
 	margin-bottom: 5px;
 	font-family: 'Work Sans';
 	font-weight: 300;
-	font-size: 1rem;
+	font-size: 1.3vw;
 	line-height: 130%;
 	text-align: justify;
 	color: #007a99;
@@ -119,8 +119,8 @@ body {
 #work-title{
 	position: relative;
 	font-family: 'Nova Mono';
-	font-size: 1.5rem;
-	padding: 5px;
+	font-size: 2vw;
+	padding: 10px;
 	padding-left: 20px;
 	padding-top: 20px;
 }
@@ -132,7 +132,7 @@ body {
 	padding-bottom: 15px;
 	font-family: 'Work Sans';
 	font-weight: 300;
-	font-size: 1rem;
+	font-size: 1.3vw;
 	line-height: 130%;
 	vertical-align: middle;
 }
