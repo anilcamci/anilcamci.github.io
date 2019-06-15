@@ -5,6 +5,12 @@
 html {
     overflow: hidden;
     height: 100%;
+    font-size: 15px;
+}
+@media only screen and (max-width: 400px){
+  html {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -35,7 +41,7 @@ body {
   margin-left: 20px;
   margin-top: 8px;
 	margin-bottom: 5px;
-  font-size: 3vw;
+  font-size: 2.5rem;
 	color: #007a99;
 }
 
@@ -81,7 +87,7 @@ body {
 	margin-bottom: 5px;
 	font-family: 'Work Sans';
 	font-weight: 300;
-	font-size: 1.3vw;
+	font-size: 1rem;
 	line-height: 130%;
 	text-align: justify;
 	color: #007a99;
@@ -103,8 +109,13 @@ body {
 	margin-bottom: 0;
 	display: inline-grid;
 	grid-gap: 5px;
-	grid-template-columns: repeat(auto-fill, minmax(25em,1fr));
+	grid-template-columns: repeat(auto-fill, minmax(370px,1fr));
 	grid-auto-rows: 10px;
+}
+@media only screen and (max-width: 400px){
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  }
 }
 
 .work-container{
@@ -119,7 +130,7 @@ body {
 #work-title{
 	position: relative;
 	font-family: 'Nova Mono';
-	font-size: 2vw;
+	font-size: 1.6rem;
 	padding: 10px;
 	padding-left: 20px;
 	padding-top: 20px;
@@ -132,7 +143,7 @@ body {
 	padding-bottom: 15px;
 	font-family: 'Work Sans';
 	font-weight: 300;
-	font-size: 1.3vw;
+	font-size: 1rem;
 	line-height: 130%;
 	vertical-align: middle;
 }
