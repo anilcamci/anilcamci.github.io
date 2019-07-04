@@ -92,15 +92,11 @@ body {
 	color: #007a99;
 	background-color: #9bffee;
 }
-
-/* @media screen and (max-width: 576px) {
-  #menu-container {
-     float: left;
-  }
+@media screen and (max-width: 400px) {
 	#bio-container {
-		margin-top: 100px;
+		margin-top: 40px;
 	}
-} */
+}
 
 .grid {
 	margin-top: 0;
