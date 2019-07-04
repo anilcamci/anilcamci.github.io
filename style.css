@@ -27,7 +27,7 @@ body {
   margin-right: 30px;
 }
 @media only screen and (max-width: 400px){
-  html {
+  body {
     margin-left: 5px;
     margin-right: 5px;
   }
