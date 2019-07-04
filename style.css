@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:500');
 
 html {
-    /* overflow: hidden;
-    height: 100%; */
     font-size: 15px;
 }
 @media only screen and (max-width: 400px){
@@ -26,6 +24,12 @@ body {
   margin-left: 30px;
   margin-right: 30px;
 }
+@media only screen and (max-width: 400px){
+  body {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
 .topbar{
   position: fixed;
@@ -34,6 +38,11 @@ body {
 	z-index: 1;
 	font-family: 'Nova Mono';
 	background-color: #9bffee;
+}
+@media only screen and (max-width: 400px){
+  .topbar {
+    width: calc(100% - 10px);
+  }
 }
 
 #title{
